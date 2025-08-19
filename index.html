@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Scoreboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="scoreboard-main">
+        <!-- Header -->
+        <section class="scoreboard-header">
+            <h1>Cricket Match Tracker</h1>
+        </section>
+
+        <!-- Score Info -->
+        <section class="scoreboard-info">
+            <div class="score-info">
+                <div class="score-block">
+                    <span class="label">Score</span>
+                    <span id="team-score-display" class="score-value">0/0</span>
+                </div>
+                <div class="score-block">
+                    <span class="label">Wickets</span>
+                    <span id="wickets-display" class="score-value">0</span>
+                </div>
+                <div class="score-block">
+                    <span class="label">Overs</span>
+                    <span id="overs-display" class="score-value">0.0</span>
+                </div>
+            </div>
+
+            <div class="players-info">
+                <span class="label">Batsmen</span>
+                <div class="players-list">
+                    <span id="player-Viraj" class="player-score">Viraj: 0*</span>
+                    <span id="player-Meka" class="player-score">Meka: 0</span>
+                </div>
+            </div>
+
+            <div id="free-hit-status" class="free-hit-message"></div>
+        </section>
+
+        <!-- Controls -->
+        <section class="scoreboard-controls">
+            <div class="controls-row">
+                <div class="controls-group">
+                    <h2>Runs</h2>
+                    <div class="button-box">
+                        <button id="btn-run-1" type="button">1 Run</button>
+                        <button id="btn-run-2" type="button">2 Runs</button>
+                        <button id="btn-run-3" type="button">3 Runs</button>
+                        <button id="btn-run-4" type="button">4 Runs</button>
+                        <button id="btn-run-6" type="button">6 Runs</button>
+                    </div>
+                </div>
+                <div class="controls-group">
+                    <h2>Extras</h2>
+                    <div class="button-box">
+                        <button id="btn-wide" type="button">Wide</button>
+                        <button id="btn-no-ball" type="button">No Ball</button>
+                        <button id="btn-bye" type="button">Bye</button>
+                        <button id="btn-leg-bye" type="button">Leg Bye</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-row">
+                <div class="controls-group">
+                    <h2>Wickets</h2>
+                    <div class="button-box">
+                        <button id="btn-wicket" type="button">Wicket</button>
+                        <button id="btn-lbw" type="button">LBW</button>
+                    </div>
+                </div>
+                <div class="controls-group">
+                    <h2>Actions</h2>
+                    <div class="button-box">
+                        <button id="btn-switch-striker" type="button">Switch Striker</button>
+                        <button id="btn-free-hit" type="button">Free Hit</button>
+                        <button id="btn-reset" type="button" class="reset-btn">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
