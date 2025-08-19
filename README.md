@@ -12,7 +12,7 @@ This project is designed to track scores, overs, and players in real time with a
   Displays team runs, wickets, and overs in real time.
 
 - **Player Stats**  
-  Tracks runs for Rahul and Rohit, with striker indicated clearly.
+  Tracks runs for Viraj and Meka, with striker indicated clearly.
 
 - **Overs Display**  
   Shows overs in `overs.balls` format (e.g., 4.2).
@@ -49,8 +49,8 @@ Just open `index.html` directly in a browser (some functionality might behave di
 
 ## 🎨 Design Choices & Assumptions
 
-- Only two batsmen (`Rahul` and `Rohit`) are implemented.  
-- After a wicket, **Rahul always becomes the new striker**.  
+- Only two batsmen (`Viraj` and `Meka`) are implemented.  
+- After a wicket, **Viraj always becomes the new striker**.  
 - "Wicket" and "LBW" buttons both decrease wickets by 1.  
 - **Free Hit** adds 1 run to the team and applies free-hit logic for the next ball (as per assignment rules).  
 - After **10 wickets**, scoring stops but no "Game Over" message is displayed.
