@@ -5,18 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let overCount = 0;
     let ballCount = 0;
     let batsmen = {
-        Viraj: 0,
-        Meka: 0
+        Rahul: 0,
+        Rohith: 0
     };
-    let striker = 'Viraj';
+    let striker = 'Rahul';
     let freeHitActive = false;
 
     // --- UI ELEMENTS ---
     const scoreEl = document.getElementById('team-score-display');
     const wicketsEl = document.getElementById('wickets-display');
     const overEl = document.getElementById('overs-display');
-    const VirajEl = document.getElementById('player-Viraj');
-    const MekaEl = document.getElementById('player-Meka');
+    const RahulEl = document.getElementById('player-Rahul');
+    const RohithEl = document.getElementById('player-Rohith');
     const freeHitEl = document.getElementById('free-hit-status');
 
     // --- DISPLAY REFRESH ---
@@ -26,20 +26,20 @@ document.addEventListener('DOMContentLoaded', () => {
         overEl.textContent = `${overCount}.${ballCount}`;
 
         // reset text
-        VirajEl.textContent = `Viraj: ${batsmen.Viraj}`;
-        MekaEl.textContent = `Meka: ${batsmen.Meka}`;
+        RahulEl.textContent = `Rahul: ${batsmen.Rahul}`;
+        RohithEl.textContent = `Rohith: ${batsmen.Rohith}`;
 
         // clear striker styles
-        VirajEl.classList.remove('striker');
-        MekaEl.classList.remove('striker');
+        RahulEl.classList.remove('striker');
+        RohithEl.classList.remove('striker');
 
         // add striker indicator
-        if (striker === 'Viraj') {
-            VirajEl.textContent += '*';
-            VirajEl.classList.add('striker');
+        if (striker === 'Rahul') {
+            RahulEl.textContent += '*';
+            RahulEl.classList.add('striker');
         } else {
-            MekaEl.textContent += '*';
-            MekaEl.classList.add('striker');
+            RohithEl.textContent += '*';
+            RohithEl.classList.add('striker');
         }
 
         freeHitEl.textContent = freeHitActive ? 'FREE HIT!' : '';
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- GAME ACTIONS ---
     function toggleStriker() {
-        striker = striker === 'Viraj' ? 'Meka' : 'Viraj';
+        striker = striker === 'Rahul' ? 'Rohith' : 'Rahul';
     }
 
     function nextBall() {
@@ -92,9 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
         outs = 0;
         overCount = 0;
         ballCount = 0;
-        batsmen.Viraj = 0;
-        batsmen.Meka = 0;
-        striker = 'Viraj';
+        batsmen.Rahul = 0;
+        batsmen.Rohith = 0;
+        striker = 'Rahul';
         freeHitActive = false;
         renderScoreboard();
     }
